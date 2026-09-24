@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Print Invoice Styles */
+@media print {
+  .screen-only {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    margin: 20mm;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+  .screen-only {
+    display: block !important;
+  }
+}
